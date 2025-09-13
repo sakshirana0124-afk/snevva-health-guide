@@ -12,12 +12,7 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <img 
-              src="/lovable-uploads/bfb847ca-0ffb-4e24-b02b-b7f6a0479969.png" 
-              alt="SNEVVA" 
-              className="h-8 w-8"
-            />
+          <div className="flex items-center">
             <img 
               src="/lovable-uploads/7440b4f7-3461-4a24-8f3c-b0d1950f4f97.png" 
               alt="SNEVVA" 
@@ -33,11 +28,14 @@ const Header = () => {
             <a href="#how-it-works" className="text-foreground hover:text-primary transition-colors font-medium">
               How it Works
             </a>
-            <a href="#pricing" className="text-foreground hover:text-primary transition-colors font-medium">
-              Pricing
-            </a>
-            <a href="#doctors" className="text-foreground hover:text-primary transition-colors font-medium">
+            <a href="/doctors" className="text-foreground hover:text-primary transition-colors font-medium">
               For Doctors
+            </a>
+            <a href="/blog" className="text-foreground hover:text-primary transition-colors font-medium">
+              Blog
+            </a>
+            <a href="#contact" className="text-foreground hover:text-primary transition-colors font-medium">
+              Contact
             </a>
           </nav>
 
@@ -73,13 +71,17 @@ const Header = () => {
                 <FileText className="h-4 w-4" />
                 <span>How it Works</span>
               </a>
-              <a href="#pricing" className="flex items-center space-x-2 text-foreground hover:text-primary transition-colors font-medium">
-                <Calendar className="h-4 w-4" />
-                <span>Pricing</span>
-              </a>
-              <a href="#doctors" className="flex items-center space-x-2 text-foreground hover:text-primary transition-colors font-medium">
+              <a href="/doctors" className="flex items-center space-x-2 text-foreground hover:text-primary transition-colors font-medium">
                 <Phone className="h-4 w-4" />
                 <span>For Doctors</span>
+              </a>
+              <a href="/blog" className="flex items-center space-x-2 text-foreground hover:text-primary transition-colors font-medium">
+                <FileText className="h-4 w-4" />
+                <span>Blog</span>
+              </a>
+              <a href="#contact" className="flex items-center space-x-2 text-foreground hover:text-primary transition-colors font-medium">
+                <Phone className="h-4 w-4" />
+                <span>Contact</span>
               </a>
               <div className="flex flex-col space-y-2 pt-4 border-t border-border">
                 <Button variant="ghost" size="sm" className="justify-start">

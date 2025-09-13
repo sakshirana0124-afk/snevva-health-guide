@@ -145,6 +145,54 @@ const Features = () => {
             </div>
           </Card>
         </div>
+
+        {/* Dashboard Screenshots */}
+        <div className="mt-20">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl font-heading font-bold mb-4">See SNEVVA in action</h3>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Get a preview of our intuitive dashboard designed for seamless health management
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="overflow-hidden">
+              <img 
+                src="/src/assets/dashboard-main.png" 
+                alt="SNEVVA Main Dashboard"
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-4">
+                <h4 className="font-semibold mb-2">Health Overview</h4>
+                <p className="text-sm text-muted-foreground">Track vitals, medications, and health metrics in one place</p>
+              </div>
+            </Card>
+
+            <Card className="overflow-hidden">
+              <img 
+                src="/src/assets/dashboard-period-tracker.png" 
+                alt="Period Tracker Dashboard"
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-4">
+                <h4 className="font-semibold mb-2">Women's Health</h4>
+                <p className="text-sm text-muted-foreground">Comprehensive period and fertility tracking with AI insights</p>
+              </div>
+            </Card>
+
+            <Card className="overflow-hidden">
+              <img 
+                src="/src/assets/dashboard-diet.png" 
+                alt="Diet Plan Dashboard"
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-4">
+                <h4 className="font-semibold mb-2">Nutrition Plans</h4>
+                <p className="text-sm text-muted-foreground">Personalized meal plans and dietary recommendations</p>
+              </div>
+            </Card>
+          </div>
+        </div>
       </div>
     </section>
   );
