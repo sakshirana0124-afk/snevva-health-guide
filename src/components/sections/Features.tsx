@@ -10,7 +10,9 @@ import {
   Pill, 
   Shield,
   Users,
-  CreditCard
+  CreditCard,
+  Monitor,
+  Activity
 } from 'lucide-react';
 
 const features = [
@@ -156,40 +158,28 @@ const Features = () => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="overflow-hidden">
-              <img 
-                src="/src/assets/dashboard-main.png" 
-                alt="SNEVVA Main Dashboard"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-4">
-                <h4 className="font-semibold mb-2">Health Overview</h4>
-                <p className="text-sm text-muted-foreground">Track vitals, medications, and health metrics in one place</p>
+            <Card className="p-6">
+              <div className="w-full h-48 bg-gradient-subtle rounded-lg mb-4 flex items-center justify-center">
+                <Monitor className="w-16 h-16 text-primary/60" />
               </div>
+              <h4 className="font-semibold mb-2">Health Overview</h4>
+              <p className="text-sm text-muted-foreground">Track vitals, medications, and health metrics in one place</p>
             </Card>
 
-            <Card className="overflow-hidden">
-              <img 
-                src="/src/assets/dashboard-period-tracker.png" 
-                alt="Period Tracker Dashboard"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-4">
-                <h4 className="font-semibold mb-2">Women's Health</h4>
-                <p className="text-sm text-muted-foreground">Comprehensive period and fertility tracking with AI insights</p>
+            <Card className="p-6">
+              <div className="w-full h-48 bg-gradient-subtle rounded-lg mb-4 flex items-center justify-center">
+                <Heart className="w-16 h-16 text-primary/60" />
               </div>
+              <h4 className="font-semibold mb-2">Women's Health</h4>
+              <p className="text-sm text-muted-foreground">Comprehensive period and fertility tracking with AI insights</p>
             </Card>
 
-            <Card className="overflow-hidden">
-              <img 
-                src="/src/assets/dashboard-diet.png" 
-                alt="Diet Plan Dashboard"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-4">
-                <h4 className="font-semibold mb-2">Nutrition Plans</h4>
-                <p className="text-sm text-muted-foreground">Personalized meal plans and dietary recommendations</p>
+            <Card className="p-6">
+              <div className="w-full h-48 bg-gradient-subtle rounded-lg mb-4 flex items-center justify-center">
+                <Activity className="w-16 h-16 text-primary/60" />
               </div>
+              <h4 className="font-semibold mb-2">Nutrition Plans</h4>
+              <p className="text-sm text-muted-foreground">Personalized meal plans and dietary recommendations</p>
             </Card>
           </div>
         </div>

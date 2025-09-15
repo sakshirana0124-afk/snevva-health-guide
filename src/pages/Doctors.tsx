@@ -13,10 +13,9 @@ import {
   CheckCircle,
   Star,
   TrendingUp,
-  Award
+  Award,
+  Monitor
 } from 'lucide-react';
-import mascotElly from '@/assets/mascot-elly.png';
-import dashboardMain from '@/assets/dashboard-main.png';
 
 const Doctors = () => {
   return (
@@ -45,11 +44,9 @@ const Doctors = () => {
               </p>
             </div>
             <div className="relative">
-              <img 
-                src={mascotElly} 
-                alt="Elly - SNEVVA Medical Assistant" 
-                className="w-80 h-80 mx-auto animate-pulse"
-              />
+              <div className="w-80 h-80 mx-auto bg-gradient-subtle rounded-lg flex items-center justify-center">
+                <Stethoscope className="w-40 h-40 text-primary/60" />
+              </div>
             </div>
           </div>
         </div>
@@ -182,11 +179,9 @@ const Doctors = () => {
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <img 
-                src={dashboardMain} 
-                alt="Doctor Dashboard Interface" 
-                className="rounded-lg shadow-elevated"
-              />
+              <div className="w-full h-80 bg-gradient-subtle rounded-lg flex items-center justify-center">
+                <Monitor className="w-32 h-32 text-primary/60" />
+              </div>
             </div>
             <div className="space-y-6">
               <div className="flex items-start space-x-4">

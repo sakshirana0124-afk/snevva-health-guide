@@ -90,14 +90,6 @@ const Hero = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               
-              {/* Mascot overlay */}
-              <div className="absolute bottom-4 right-4">
-                <img 
-                  src="/src/assets/mascot-elly.png" 
-                  alt="Elly - SNEVVA Mascot" 
-                  className="w-20 h-20 animate-pulse opacity-80"
-                />
-              </div>
             </div>
             
             {/* Floating elements */}

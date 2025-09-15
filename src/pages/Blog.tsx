@@ -13,7 +13,7 @@ import {
   Heart,
   Share2
 } from 'lucide-react';
-import mascotElly from '@/assets/mascot-elly.png';
+
 
 // Mock blog data
 const blogPosts = [
@@ -27,7 +27,7 @@ const blogPosts = [
     category: "Technology",
     tags: ["AI", "Lab Reports", "Healthcare"],
     featured: true,
-    image: "/src/assets/dashboard-main.png"
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
   },
   {
     id: 2,
@@ -51,7 +51,7 @@ const blogPosts = [
     category: "Women's Health",
     tags: ["Women's Health", "AI", "Tracking"],
     featured: false,
-    image: "/src/assets/dashboard-period-tracker.png"
+    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
   },
   {
     id: 4,
@@ -63,7 +63,7 @@ const blogPosts = [
     category: "Patient Care",
     tags: ["Telemedicine", "Patient Tips", "Consultation"],
     featured: false,
-    image: "/src/assets/dashboard-diet.png"
+    image: "https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
   }
 ];
 
@@ -289,11 +289,9 @@ const Blog = () => {
               </p>
             </div>
             <div className="text-center">
-              <img 
-                src={mascotElly} 
-                alt="Elly - SNEVVA Mascot" 
-                className="w-64 h-64 mx-auto animate-pulse"
-              />
+              <div className="w-64 h-64 mx-auto bg-gradient-subtle rounded-full flex items-center justify-center">
+                <Heart className="w-32 h-32 text-primary/60" />
+              </div>
             </div>
           </div>
         </div>
