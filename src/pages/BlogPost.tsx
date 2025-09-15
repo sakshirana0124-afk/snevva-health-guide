@@ -261,7 +261,7 @@ const BlogPost = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="overflow-hidden">
               <img 
-                src="/src/assets/hero-medical-team.jpg" 
+                src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                 alt="Telemedicine Best Practices"
                 className="w-full h-48 object-cover"
               />
@@ -279,7 +279,7 @@ const BlogPost = () => {
 
             <Card className="overflow-hidden">
               <img 
-                src="/src/assets/dashboard-period-tracker.png" 
+                src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                 alt="Women's Health AI"
                 className="w-full h-48 object-cover"
               />
@@ -297,7 +297,7 @@ const BlogPost = () => {
 
             <Card className="overflow-hidden">
               <img 
-                src="/src/assets/dashboard-diet.png" 
+                src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                 alt="Patient Preparation"
                 className="w-full h-48 object-cover"
               />
