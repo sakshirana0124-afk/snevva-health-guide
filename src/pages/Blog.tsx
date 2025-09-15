@@ -3,6 +3,8 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
+import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
 import { 
   Search, 
   Calendar, 
@@ -85,6 +87,7 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Header />
       {/* Hero Section */}
       <section className="bg-gradient-subtle py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -296,6 +299,7 @@ const Blog = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };
