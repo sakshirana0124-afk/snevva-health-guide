@@ -159,24 +159,36 @@ const Features = () => {
           
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="p-6">
-              <div className="w-full h-48 bg-gradient-subtle rounded-lg mb-4 flex items-center justify-center">
-                <Monitor className="w-16 h-16 text-primary/60" />
+              <div className="w-full h-48 rounded-lg mb-4 overflow-hidden">
+                <img 
+                  src="/src/assets/health-overview-app.jpg" 
+                  alt="Health Overview Dashboard"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <h4 className="font-semibold mb-2">Health Overview</h4>
               <p className="text-sm text-muted-foreground">Track vitals, medications, and health metrics in one place</p>
             </Card>
 
             <Card className="p-6">
-              <div className="w-full h-48 bg-gradient-subtle rounded-lg mb-4 flex items-center justify-center">
-                <Heart className="w-16 h-16 text-primary/60" />
+              <div className="w-full h-48 rounded-lg mb-4 overflow-hidden">
+                <img 
+                  src="/src/assets/womens-health-tracking.jpg" 
+                  alt="Women's Health Tracking"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <h4 className="font-semibold mb-2">Women's Health</h4>
               <p className="text-sm text-muted-foreground">Comprehensive period and fertility tracking with AI insights</p>
             </Card>
 
             <Card className="p-6">
-              <div className="w-full h-48 bg-gradient-subtle rounded-lg mb-4 flex items-center justify-center">
-                <Activity className="w-16 h-16 text-primary/60" />
+              <div className="w-full h-48 rounded-lg mb-4 overflow-hidden">
+                <img 
+                  src="/src/assets/nutrition-plans-app.jpg" 
+                  alt="Nutrition Planning Interface"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <h4 className="font-semibold mb-2">Nutrition Plans</h4>
               <p className="text-sm text-muted-foreground">Personalized meal plans and dietary recommendations</p>

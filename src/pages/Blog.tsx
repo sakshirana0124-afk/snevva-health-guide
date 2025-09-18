@@ -138,53 +138,55 @@ const Blog = () => {
               <h2 className="text-2xl font-heading font-bold">Editor's Pick</h2>
             </div>
             
-            <Card className="max-w-6xl mx-auto overflow-hidden">
-              <div className="grid lg:grid-cols-2 gap-8">
-                <div className="lg:order-2">
-                  <img 
-                    src={featuredPost.image} 
-                    alt={featuredPost.title}
-                    className="w-full h-64 lg:h-full object-cover"
-                  />
-                </div>
-                <div className="p-8 lg:order-1">
-                  <div className="flex items-center gap-4 mb-4">
-                    <Badge variant="outline">{featuredPost.category}</Badge>
-                    <div className="flex items-center text-muted-foreground text-sm">
-                      <Calendar className="h-4 w-4 mr-1" />
-                      {new Date(featuredPost.date).toLocaleDateString()}
-                    </div>
-                    <div className="flex items-center text-muted-foreground text-sm">
-                      <Clock className="h-4 w-4 mr-1" />
-                      {featuredPost.readTime}
-                    </div>
+            <a href={`/blog/${featuredPost.id}`} className="block">
+              <Card className="max-w-6xl mx-auto overflow-hidden hover:shadow-elevated transition-shadow">
+                <div className="grid lg:grid-cols-2 gap-8">
+                  <div className="lg:order-2">
+                    <img 
+                      src={featuredPost.image} 
+                      alt={featuredPost.title}
+                      className="w-full h-64 lg:h-full object-cover"
+                    />
                   </div>
-                  
-                  <h3 className="text-2xl lg:text-3xl font-heading font-bold mb-4">
-                    {featuredPost.title}
-                  </h3>
-                  <p className="text-muted-foreground mb-6 text-lg">
-                    {featuredPost.excerpt}
-                  </p>
-                  
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center">
-                      <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-3">
-                        <User className="h-5 w-5 text-primary" />
+                  <div className="p-8 lg:order-1">
+                    <div className="flex items-center gap-4 mb-4">
+                      <Badge variant="outline">{featuredPost.category}</Badge>
+                      <div className="flex items-center text-muted-foreground text-sm">
+                        <Calendar className="h-4 w-4 mr-1" />
+                        {new Date(featuredPost.date).toLocaleDateString()}
                       </div>
-                      <div>
-                        <div className="font-semibold">{featuredPost.author}</div>
-                        <div className="text-sm text-muted-foreground">Medical Expert</div>
+                      <div className="flex items-center text-muted-foreground text-sm">
+                        <Clock className="h-4 w-4 mr-1" />
+                        {featuredPost.readTime}
                       </div>
                     </div>
-                    <Button>
-                      Read Article
-                      <ArrowRight className="h-4 w-4 ml-2" />
-                    </Button>
+                    
+                    <h3 className="text-2xl lg:text-3xl font-heading font-bold mb-4 hover:text-primary transition-colors">
+                      {featuredPost.title}
+                    </h3>
+                    <p className="text-muted-foreground mb-6 text-lg">
+                      {featuredPost.excerpt}
+                    </p>
+                    
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center">
+                        <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-3">
+                          <User className="h-5 w-5 text-primary" />
+                        </div>
+                        <div>
+                          <div className="font-semibold">{featuredPost.author}</div>
+                          <div className="text-sm text-muted-foreground">Medical Expert</div>
+                        </div>
+                      </div>
+                      <Button onClick={(e) => e.preventDefault()}>
+                        Read Article
+                        <ArrowRight className="h-4 w-4 ml-2" />
+                      </Button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </Card>
+              </Card>
+            </a>
           </div>
         </section>
       )}
@@ -204,56 +206,58 @@ const Blog = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {regularPosts.map((post) => (
-              <Card key={post.id} className="overflow-hidden hover:shadow-elevated transition-shadow">
-                <img 
-                  src={post.image} 
-                  alt={post.title}
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-6">
-                  <div className="flex items-center gap-2 mb-3">
-                    <Badge variant="outline" className="text-xs">{post.category}</Badge>
-                    {post.tags.slice(0, 2).map((tag) => (
-                      <Badge key={tag} variant="secondary" className="text-xs">{tag}</Badge>
-                    ))}
-                  </div>
-                  
-                  <h3 className="font-heading font-semibold mb-2 line-clamp-2">
-                    {post.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm mb-4 line-clamp-3">
-                    {post.excerpt}
-                  </p>
-                  
-                  <div className="flex items-center justify-between text-sm text-muted-foreground mb-4">
-                    <div className="flex items-center">
-                      <Calendar className="h-4 w-4 mr-1" />
-                      {new Date(post.date).toLocaleDateString()}
+              <a key={post.id} href={`/blog/${post.id}`} className="block">
+                <Card className="overflow-hidden hover:shadow-elevated transition-shadow h-full">
+                  <img 
+                    src={post.image} 
+                    alt={post.title}
+                    className="w-full h-48 object-cover"
+                  />
+                  <div className="p-6">
+                    <div className="flex items-center gap-2 mb-3">
+                      <Badge variant="outline" className="text-xs">{post.category}</Badge>
+                      {post.tags.slice(0, 2).map((tag) => (
+                        <Badge key={tag} variant="secondary" className="text-xs">{tag}</Badge>
+                      ))}
                     </div>
-                    <div className="flex items-center">
-                      <Clock className="h-4 w-4 mr-1" />
-                      {post.readTime}
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center text-sm">
-                      <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center mr-2">
-                        <User className="h-4 w-4 text-primary" />
+                    
+                    <h3 className="font-heading font-semibold mb-2 line-clamp-2 hover:text-primary transition-colors">
+                      {post.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm mb-4 line-clamp-3">
+                      {post.excerpt}
+                    </p>
+                    
+                    <div className="flex items-center justify-between text-sm text-muted-foreground mb-4">
+                      <div className="flex items-center">
+                        <Calendar className="h-4 w-4 mr-1" />
+                        {new Date(post.date).toLocaleDateString()}
                       </div>
-                      <span className="font-medium">{post.author}</span>
+                      <div className="flex items-center">
+                        <Clock className="h-4 w-4 mr-1" />
+                        {post.readTime}
+                      </div>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <Button variant="ghost" size="sm">
-                        <Heart className="h-4 w-4" />
-                      </Button>
-                      <Button variant="ghost" size="sm">
-                        <Share2 className="h-4 w-4" />
-                      </Button>
+                    
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center text-sm">
+                        <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center mr-2">
+                          <User className="h-4 w-4 text-primary" />
+                        </div>
+                        <span className="font-medium">{post.author}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Button variant="ghost" size="sm" onClick={(e) => e.preventDefault()}>
+                          <Heart className="h-4 w-4" />
+                        </Button>
+                        <Button variant="ghost" size="sm" onClick={(e) => e.preventDefault()}>
+                          <Share2 className="h-4 w-4" />
+                        </Button>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </Card>
+                </Card>
+              </a>
             ))}
           </div>
 

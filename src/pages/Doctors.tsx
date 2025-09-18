@@ -38,7 +38,7 @@ const Doctors = () => {
                 <Button size="lg" variant="secondary" className="text-primary">
                   Join as Doctor
                 </Button>
-                <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10">
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
                   Request Demo
                 </Button>
               </div>
@@ -182,8 +182,12 @@ const Doctors = () => {
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="w-full h-80 bg-gradient-subtle rounded-lg flex items-center justify-center">
-                <Monitor className="w-32 h-32 text-primary/60" />
+              <div className="w-full h-80 rounded-lg overflow-hidden">
+                <img 
+                  src="/src/assets/dashboard-interface.jpg"
+                  alt="Doctor Dashboard Interface"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
             <div className="space-y-6">
@@ -256,31 +260,14 @@ const Doctors = () => {
               </div>
             </div>
 
-            <Card className="p-8">
-              <h3 className="text-xl font-heading font-semibold mb-6">Earnings & Payments</h3>
-              <div className="space-y-4">
-                <div className="flex justify-between items-center py-3 border-b border-border">
-                  <span className="text-muted-foreground">Video Consultation (30 min)</span>
-                  <span className="font-semibold">$75 - $120</span>
-                </div>
-                <div className="flex justify-between items-center py-3 border-b border-border">
-                  <span className="text-muted-foreground">Lab Report Review</span>
-                  <span className="font-semibold">$25 - $40</span>
-                </div>
-                <div className="flex justify-between items-center py-3 border-b border-border">
-                  <span className="text-muted-foreground">Follow-up Consultation</span>
-                  <span className="font-semibold">$45 - $65</span>
-                </div>
-                <div className="flex justify-between items-center py-3">
-                  <span className="text-muted-foreground">Platform Fee</span>
-                  <span className="font-semibold">15%</span>
-                </div>
-              </div>
-              <div className="mt-6 p-4 bg-muted rounded-lg">
-                <p className="text-sm text-muted-foreground mb-2">Payment Schedule</p>
-                <p className="font-semibold">Weekly direct deposits every Friday</p>
-              </div>
-            </Card>
+            <div className="relative">
+              <img 
+                src="/src/assets/telemedicine-consultation.jpg"
+                alt="Doctor providing telemedicine consultation"
+                className="w-full h-80 object-cover rounded-lg"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
+            </div>
           </div>
         </div>
       </section>

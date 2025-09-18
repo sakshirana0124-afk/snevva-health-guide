@@ -59,11 +59,11 @@ const Hero = () => {
             </div>
 
             {/* Social proof */}
-            <div className="pt-8 border-t border-border">
+            <div className="pt-8 border-t border-border text-center">
               <p className="text-sm text-muted-foreground mb-4">
                 Trusted by patients and healthcare professionals
               </p>
-              <div className="flex items-center gap-8">
+              <div className="flex items-center justify-center gap-8">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-foreground">50K+</div>
                   <div className="text-xs text-muted-foreground">Consultations</div>

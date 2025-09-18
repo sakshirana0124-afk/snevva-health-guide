@@ -13,11 +13,13 @@ const Header = () => {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <img 
-              src="/lovable-uploads/7440b4f7-3461-4a24-8f3c-b0d1950f4f97.png" 
-              alt="SNEVVA" 
-              className="h-6"
-            />
+            <a href="/" className="flex items-center">
+              <img 
+                src="/snevva-icon-900px.png" 
+                alt="SNEVVA" 
+                className="h-8 w-8"
+              />
+            </a>
           </div>
 
           {/* Desktop Navigation */}
@@ -33,9 +35,6 @@ const Header = () => {
             </a>
             <a href="/blog" className="text-foreground hover:text-primary transition-colors font-medium">
               Blog
-            </a>
-            <a href="#contact" className="text-foreground hover:text-primary transition-colors font-medium">
-              Contact
             </a>
           </nav>
 
@@ -78,10 +77,6 @@ const Header = () => {
               <a href="/blog" className="flex items-center space-x-2 text-foreground hover:text-primary transition-colors font-medium">
                 <FileText className="h-4 w-4" />
                 <span>Blog</span>
-              </a>
-              <a href="#contact" className="flex items-center space-x-2 text-foreground hover:text-primary transition-colors font-medium">
-                <Phone className="h-4 w-4" />
-                <span>Contact</span>
               </a>
               <div className="flex flex-col space-y-2 pt-4 border-t border-border">
                 <Button variant="ghost" size="sm" className="justify-start">
